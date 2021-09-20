@@ -90,7 +90,13 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 
 // takes in two doubles and returns a vector of size n with
 // values n*1, n*2, n*3... up to n*m
-std::vector<double> Multiples(double n, double m);
+std::vector<double> Multiples(double n, double m){
+	std::vector<double> values;
+	for(int i = 1; i<m; i++){
+		values.push_back(n*i);
+	}
+	return values;
+}
 
 // returns -1 if the number is negative and 1 if positive
 double Sign(double num);
